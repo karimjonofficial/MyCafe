@@ -1,4 +1,4 @@
-namespace application;
+namespace data;
 
 public class UnitTest1
 {
