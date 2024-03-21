@@ -4,11 +4,12 @@ using interfaces.Repositories;
 
 namespace data.Repositories.Base;
 
-public class Repository<T> : IRepository<T> where T : Entity, new()
+public class DbRepository<T> : IRepository<T> where T : Entity, new()
 {
-    public Repository()
+    private ICollection<T> db;
+    public DbRepository(ICollection<T> db)
     {
-        
+        this.db = db;
     }
     
     public Task<T> PostAsync(T model, CancellationToken token = default)
@@ -67,6 +68,11 @@ public class Repository<T> : IRepository<T> where T : Entity, new()
     }
 
     public Task<bool> Exists(int id, CancellationToken token)
+    {
+        throw new NotImplementedException();
+    }
+
+    public Task<int> GetCount(CancellationToken token)
     {
         throw new NotImplementedException();
     }

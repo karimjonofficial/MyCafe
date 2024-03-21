@@ -21,4 +21,5 @@ public interface IRepository<T>
     Task<IPage<T>> GetDescAsync(int index, int count, string sortBy, string filter, CancellationToken token = default);
 
     Task<bool> Exists(int id, CancellationToken token);
+    Task<int> GetCount(CancellationToken token);
 }

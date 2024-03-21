@@ -1,8 +1,8 @@
 ﻿namespace interfaces.Pages;
 
-public interface IPage<out T>
+public interface IPage<T>
 {
-    IEnumerable<T> Items { get; }
+    ICollection<T> Items { get; }
     int Index { get; }
     int Count { get; }
     int TotalItems { get; }

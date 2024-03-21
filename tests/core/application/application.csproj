@@ -21,7 +21,9 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="UseCases\" />
+    <ProjectReference Include="..\..\..\src\core\application\application.csproj" />
+    <ProjectReference Include="..\..\..\src\core\domain\domain.csproj" />
+    <ProjectReference Include="..\..\..\src\infrastructure\data\data.csproj" />
   </ItemGroup>
 
 </Project>
