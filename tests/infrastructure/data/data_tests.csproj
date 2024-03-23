@@ -20,4 +20,9 @@
     <Using Include="Xunit" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\src\core\domain\domain.csproj" />
+    <ProjectReference Include="..\..\..\src\infrastructure\data\data.csproj" />
+  </ItemGroup>
+
 </Project>

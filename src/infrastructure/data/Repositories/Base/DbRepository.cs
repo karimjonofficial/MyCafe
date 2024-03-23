@@ -4,14 +4,9 @@ using interfaces.Repositories;
 
 namespace data.Repositories.Base;
 
-public class DbRepository<T> : IRepository<T> where T : Entity, new()
+public class DbRepository<T>(ICollection<T> db) : IRepository<T>
+    where T : Entity, new()
 {
-    private ICollection<T> db;
-    public DbRepository(ICollection<T> db)
-    {
-        this.db = db;
-    }
-    
     public Task<T> PostAsync(T model, CancellationToken token = default)
     {
         throw new NotImplementedException();
