@@ -47,6 +47,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "api", "api", "{934B52B7-2A1
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "api", "src\api\api.csproj", "{4D95F00C-78E3-46CE-A45E-6C743096E69F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "interactors", "src\interactors\interactors.csproj", "{A1AF7D0A-A830-408F-823D-5F2B9DDF570C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -81,6 +83,10 @@ Global
 		{4D95F00C-78E3-46CE-A45E-6C743096E69F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4D95F00C-78E3-46CE-A45E-6C743096E69F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4D95F00C-78E3-46CE-A45E-6C743096E69F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A1AF7D0A-A830-408F-823D-5F2B9DDF570C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A1AF7D0A-A830-408F-823D-5F2B9DDF570C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A1AF7D0A-A830-408F-823D-5F2B9DDF570C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A1AF7D0A-A830-408F-823D-5F2B9DDF570C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -106,6 +112,7 @@ Global
 		{DBC268BD-9B5B-4983-BE59-971050174B53} = {B267C5D4-4C0A-4BC1-8073-C97C391A19CA}
 		{934B52B7-2A1B-4255-AFAB-DBE8D18E6E68} = {15FDFDF8-E38A-4873-9CC5-A9BCE9203D18}
 		{4D95F00C-78E3-46CE-A45E-6C743096E69F} = {934B52B7-2A1B-4255-AFAB-DBE8D18E6E68}
+		{A1AF7D0A-A830-408F-823D-5F2B9DDF570C} = {85D7FA3E-B29F-43B2-9F24-12D8F34B979B}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {9C5F8344-2988-4BED-B2AB-F3325DB68F7C}
