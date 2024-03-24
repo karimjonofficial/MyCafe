@@ -11,4 +11,8 @@
     <ProjectReference Include="..\domain\domain.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Interactors\" />
+  </ItemGroup>
+
 </Project>
