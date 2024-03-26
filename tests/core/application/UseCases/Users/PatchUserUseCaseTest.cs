@@ -41,13 +41,13 @@ namespace application_tests.UseCases.Users
         void PatchUser_PatchUser_ReturnsUserWithId()
         {
             int expected = 1;
-            User user = new User();
+            User user = new User()
+            {
+                Id = expected
+            };
             Mock<IRepository<User>> mock = new();
             mock.Setup(x => x.PatchAsync(user, default))
-                .ReturnsAsync(new User
-                {
-                    Id = expected
-                });
+                .ReturnsAsync(user);
             PatchUserUseCase sut = new PatchUserUseCase(mock.Object, user);
 
             Assert.Equal(expected, sut.InvokeAsync().Id);

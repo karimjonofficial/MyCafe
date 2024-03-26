@@ -41,7 +41,7 @@ public class PostUserUseCaseTest
     void PostUser_PostUser_ReturnsUserWithId()
     {
         int expected = 1;
-        User user = new User();
+        User user = new User(){Id = expected};
         Mock<IRepository<User>> mock = new();
         mock.Setup(x => x.PostAsync(user, default))
             .ReturnsAsync(new User
