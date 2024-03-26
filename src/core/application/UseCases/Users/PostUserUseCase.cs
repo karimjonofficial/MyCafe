@@ -1,10 +1,10 @@
 ﻿using domain.Models;
 using interfaces.Repositories;
 
-namespace application.UseCases;
+namespace application.UseCases.Users;
 
 public class PostUserUseCase(IRepository<User> repository, User user)
-{   
+{
     private readonly IRepository<User> _repository = repository ?? throw new ArgumentNullException(nameof(repository));
     private readonly User _user = user ?? throw new ArgumentNullException(nameof(user));
 

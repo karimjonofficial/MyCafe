@@ -1,8 +1,8 @@
-﻿using application.UseCases;
+﻿using application.UseCases.Users;
 using domain.Models;
 using interfaces.Repositories;
 
-namespace application_tests.UseCases;
+namespace application_tests.UseCases.Users;
 
 public class PostUserUseCaseTest
 {
@@ -38,19 +38,20 @@ public class PostUserUseCaseTest
     }
 
     [Fact]
-    public async void PostUser_PostUser_ReturnsUserWithId()
+    void PostUser_PostUser_ReturnsUserWithId()
     {
         int expected = 1;
         User user = new User();
         Mock<IRepository<User>> mock = new();
         mock.Setup(x => x.PostAsync(user, default))
-            .ReturnsAsync(value: new User
+            .ReturnsAsync(new User
             {
                 Id = expected
             });
-        PostUserUseCase sut = new PostUserUseCase(repository: mock.Object, user: user);
+        PostUserUseCase sut = new PostUserUseCase(mock.Object, user);
 
-        User user1 = await sut.InvokeAsync();
-        Assert.Equal(expected, user1.Id);
+        Assert.Equal(expected, sut.InvokeAsync().Id);
     }
+
+
 }
