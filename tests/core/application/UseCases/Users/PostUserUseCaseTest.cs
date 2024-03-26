@@ -52,6 +52,4 @@ public class PostUserUseCaseTest
 
         Assert.Equal(expected, sut.InvokeAsync().Id);
     }
-
-
 }

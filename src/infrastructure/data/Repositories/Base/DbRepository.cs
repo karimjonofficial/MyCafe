@@ -71,4 +71,14 @@ public class DbRepository<T>(ICollection<T> db) : IRepository<T>
     {
         throw new NotImplementedException();
     }
+
+    public Task<T> PatchAsync(T model, CancellationToken token = default)
+    {
+        throw new NotImplementedException();
+    }
+
+    public Task<T> PutAsync(T model, CancellationToken token = default)
+    {
+        throw new NotImplementedException();
+    }
 }

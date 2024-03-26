@@ -11,8 +11,8 @@ public interface IRepository<T>
     Task<T> DeleteAsync(int id, CancellationToken token = default);
     Task<T> DeleteAsync(IEnumerable<int> ids, CancellationToken token = default);
     
-    Task<T> PatchAsync(int id, T model, CancellationToken token = default);
-    Task<T> PutAsync(int id, T model, CancellationToken token = default);
+    Task<T> PatchAsync(T model, CancellationToken token = default);
+    Task<T> PutAsync(T model, CancellationToken token = default);
     
     Task<T> GetAsync(int id, CancellationToken token = default);
     Task<IEnumerable<T>> GetAsync(CancellationToken token = default);
